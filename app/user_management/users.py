@@ -35,8 +35,8 @@ async def read_user(username: str):
 # CREATE User
 @router.post("/create", response_model=User)
 async def create_user(username: str, password: str,
-                      full_name: Optional[str] = None,
-                      disabled: Optional[bool] = None):
+                        full_name: Optional[str] = None,
+                        disabled: Optional[bool] = None):
 
     # Create dictionary of new user attributes
     attributes = {

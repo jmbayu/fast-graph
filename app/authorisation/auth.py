@@ -117,9 +117,9 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(
 # Endpoint for creating first user, at launch with appliaction password rather than user credentials
 @router.post('/launch_user')
 async def first_user(username: str,
-                     password: str,
-                     application_password: str,
-                     full_name: Optional[str] = None):
+                        password: str,
+                        application_password: str,
+                        full_name: Optional[str] = None):
 
     # Check application password is correct
     if application_password != Config.APP_PASSWORD:
